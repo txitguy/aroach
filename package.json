@@ -67,7 +67,10 @@
           "mocha": true
         }
       }
-    ]
+    ],
+    "rules": {
+      "vue/require-prop-type-constructor": "off"
+    }
   },
   "postcss": {
     "plugins": {

@@ -1,6 +1,13 @@
 // bootstsrap (first)
 @import "node_modules/bootstrap/scss/bootstrap";
 
+$theme-colors: (
+  "primary": #509ba8,
+  "secondary": #66675e,
+  "dark": #20212a,
+  "light": #eeeceb
+);
+
 // theme colors
 :root {
   --blue: #007bff;
@@ -16,14 +23,18 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #6c757d;
+  //--primary: #007bff;
+  --primary: #509ba8;
+  //--secondary: #6c757d;
+  --secondary: #66675e;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
+  //--light: #f8f9fa;
+  --light: #eeeceb;
+  //--dark: #343a40;
+  --dark: #20212a;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;

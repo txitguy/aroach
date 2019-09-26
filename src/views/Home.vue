@@ -6,10 +6,7 @@
         h3.mt-3
           | Mark
           span  Roach
-        .typing
-          p.tx-24 I'm a
-            span(ref='typing')
-              span.wrap {{text}}
+        Typewriter.text-white.tx-24(:toRotate="toRotate", base="I'm a")
 </template>
 
 <style lang="scss" scoped>
@@ -54,12 +51,8 @@
       font-size: 50px;
 
       span {
-        color: $warning;
+        color: $dark;
       }
-    }
-
-    .typing {
-      color: $white;
     }
   }
 }
@@ -67,8 +60,13 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import Typewriter from "@/components/Typewriter.vue";
 
-@Component
+@Component({
+  components: {
+    Typewriter
+  }
+})
 export default class Home extends Vue {
   toRotate: string[] = [
     " Software Engineer",
@@ -77,37 +75,37 @@ export default class Home extends Vue {
     "n Entrepreneur"
   ];
   period: number = 2000;
-  loopNum: number = 0;
-  isDeleting: boolean = false;
-  text: string = "";
+  // loopNum: number = 0;
+  // isDeleting: boolean = false;
+  // text: string = "";
 
-  mounted() {
-    this.TypingTick();
-  }
+  // mounted() {
+  //   this.TypingTick();
+  // }
 
-  TypingTick() {
-    let i = this.loopNum % this.toRotate.length;
-    let fullTxt = this.toRotate[i];
+  // TypingTick() {
+  //   let i = this.loopNum % this.toRotate.length;
+  //   let fullTxt = this.toRotate[i];
 
-    if (this.isDeleting) {
-      this.text = fullTxt.substring(0, this.text.length - 1);
-    } else {
-      this.text = fullTxt.substring(0, this.text.length + 1);
-    }
+  //   if (this.isDeleting) {
+  //     this.text = fullTxt.substring(0, this.text.length - 1);
+  //   } else {
+  //     this.text = fullTxt.substring(0, this.text.length + 1);
+  //   }
 
-    let delta = 200 - Math.random() * 100;
-    if (this.isDeleting) delta /= 2;
+  //   let delta = 200 - Math.random() * 100;
+  //   if (this.isDeleting) delta /= 2;
 
-    if (!this.isDeleting && this.text === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.text === "") {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
-    }
+  //   if (!this.isDeleting && this.text === fullTxt) {
+  //     delta = this.period;
+  //     this.isDeleting = true;
+  //   } else if (this.isDeleting && this.text === "") {
+  //     this.isDeleting = false;
+  //     this.loopNum++;
+  //     delta = 500;
+  //   }
 
-    setTimeout(this.TypingTick, delta);
-  }
+  //   setTimeout(this.TypingTick, delta);
+  // }
 }
 </script>
