@@ -1,7 +1,7 @@
 // bootstsrap (first)
 @import "node_modules/bootstrap/scss/bootstrap";
 
-// theme css (middle)
+// theme colors
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -32,6 +32,27 @@
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+// Fill SVGs with color
+@each $color, $value in $theme-colors {
+  .fill-#{$color} {
+    fill: color-yiq($value);
+  }
+}
+
+// text sizes
+.tx-8 {
+  font-size: 8px;
+}
+.tx-12 {
+  font-size: 12px;
+}
+.tx-16 {
+  font-size: 16px;
+}
+.tx-24 {
+  font-size: 24px;
 }
 
 // bootstrap-vue (last)

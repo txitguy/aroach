@@ -9,48 +9,43 @@
             b-navbar-toggle(target="nav-collapse")
             b-collapse#nav-collapse.w-100(is-nav)
               b-navbar-nav.flex-lg-column
-                b-nav-item(href="#")
-                  font-awesome-icon(icon="home")
+                b-nav-item.active(href="#")
+                  i.icon.ion-md-home
                   | Home
-                b-nav-item(href="#" disabled) Disabled
+                b-nav-item(href="#")
+                  i.icon.ion-md-person
+                  | About me
+                b-nav-item(href="#")
+                  i.icon.ion-md-list
+                  | Experience
+                b-nav-item(href="#")
+                  i.icon.ion-md-code
+                  | Projects
+                b-nav-item(href="#")
+                  i.icon.ion-md-document
+                  | Blog
+                b-nav-item(href="#")
+                  i.icon.ion-md-chatboxes
+                  | Contact
 
-        main.col.bg-faded.py-3
+        main.col.bg-faded.p-0
           router-view
-
-
-  
-    //- .container-fluid
-    //-   #navbar-wrapper.row.min-vh-100
-    //-     aside.col-lg-2.p-0.bg-dark
-    //-       nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.flex-lg-column.flex-row.align-items-start.py-2
-    //-         button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbar", aria-controls="navbar", aria-expanded="false", aria-label="Toggle navigation")
-    //-           span.navbar-toggler-icon
-    //-         #navbar.collapse.navbar-collapse
-    //-           ul.flex-lg-column.flex-row.navbar-nav.w-100.justify-content-between
-    //-             li.nav-item
-    //-               a.nav-link.pl-0.text-nowrap(href="#")
-    //-                 font-awesome-icon(icon="user-secret")
-    //-                 span.font-weight-bold  Home
-    //-             li.nav-item
-    //-               a.nav-link.pl-0.text-nowrap(href="#")
-    //-                 font-awesome-icon(icon="user-secret")
-    //-                 span.font-weight-bold  Link
-    //-             li.nav-item
-    //-               a.nav-link.pl-0.text-nowrap(href="#")
-    //-                 font-awesome-icon(icon="user-secret")
-    //-                 span.font-weight-bold  Link
-    //-             li.nav-item
-    //-               a.nav-link.pl-0.text-nowrap(href="#")
-    //-                 font-awesome-icon(icon="user-secret")
-    //-                 span.font-weight-bold  Link
-    //-     main.col.bg-faded.py-3
-    //-       router-view
 </template>
 
 <style lang="scss" scoped>
 @import "scss/theme.scss";
 
 #app {
+  #navbar-wrapper {
+    .nav-link {
+      font-size: 20px;
+      i.icon {
+        display: inline-block;
+        width: 24px;
+      }
+    }
+  }
+
   @include media-breakpoint-down(md) {
     #navbar-wrapper {
       min-height: initial !important;
