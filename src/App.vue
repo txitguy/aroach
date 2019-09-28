@@ -104,9 +104,11 @@ export default class extends Vue {
   mounted() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function(this: HTMLElement, e: Event) {
+        const href = this.getAttribute("href")!;
+        if (href.indexOf("#") !== 0) return;
         e.preventDefault();
 
-        document.querySelector(this.getAttribute("href")!)!.scrollIntoView({
+        document.querySelector(href)!.scrollIntoView({
           behavior: "smooth"
         });
       });
