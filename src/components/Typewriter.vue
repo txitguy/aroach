@@ -1,6 +1,7 @@
 <template lang="pug">
   .typing
-    p {{base}}{{text}}
+    p {{base}}
+      strong {{text}}
 </template>
 
 <script lang="ts">

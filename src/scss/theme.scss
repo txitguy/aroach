@@ -1,11 +1,15 @@
-// bootstsrap (first)
-@import "node_modules/bootstrap/scss/bootstrap";
+$primary: #509ba8;
+$secondary: #ffc107;
+$dark: #20212a;
+$dark-accent: #30708a;
+$light: #eeeceb;
+$light-accent: #66675e;
 
 $theme-colors: (
-  "primary": #509ba8,
-  "secondary": #66675e,
-  "dark": #20212a,
-  "light": #eeeceb
+  primary: $primary,
+  secondary: $secondary,
+  dark: $dark,
+  light: $light
 );
 
 // theme colors
@@ -62,9 +66,48 @@ $theme-colors: (
 .tx-16 {
   font-size: 16px;
 }
+.tx-18 {
+  font-size: 18px;
+}
 .tx-24 {
   font-size: 24px;
 }
 
-// bootstrap-vue (last)
+.title {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  text-align: left;
+  padding-bottom: 50px;
+  position: relative;
+  box-sizing: border-box;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 64px;
+    background-color: $secondary;
+    top: 2px;
+  }
+
+  & > h3 {
+    font-size: 35px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.5px !important;
+    padding-left: 25px !important;
+    line-height: 1 !important;
+    color: $primary !important;
+  }
+
+  & > span {
+    font-size: 16px !important;
+    padding-left: 25px !important;
+    color: $dark-accent !important;
+  }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/bootstrap-vue/src/index.scss";
