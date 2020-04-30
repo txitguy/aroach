@@ -64,6 +64,10 @@
     background-position: center;
     background-attachment: fixed;
 
+    @include media-breakpoint-down(md) {
+      background-attachment: scroll;
+    }
+
     .photo {
       display: inline-block;
       width: 200px;
@@ -86,6 +90,10 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    @include media-breakpoint-down(md) {
+      background-attachment: scroll;
+    }
 
     .overlay {
       min-height: 400px;
