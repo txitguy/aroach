@@ -36,7 +36,7 @@
         main.col.bg-faded.p-0.offset-lg-2
           router-view
 
-        .col-12.text-right.mb-3.tx-12 Copyright &copy; 2019, aRoach.com
+        .col-12.text-right.mb-3.tx-12 Copyright &copy; 2019, aRoach.net
 </template>
 
 <style lang="scss" scoped>
