@@ -73,7 +73,7 @@ export default class Experience extends Vue {
       title: "Engineering Manager",
       company: "Scotsman Guide Media",
       description:
-        "Designed and developed web applications and services for lead generation and marketing. Developed front-end CLI tools that allowed designers to rapidly develop prototypes. Built front-end framework built from Vue.js to help create an SPA website. Provided dev-ops support and designed developer workflow and deployment strategies",
+        "Managed the engineering department and established best practices as well as implemented department processes to speed up the development cycle and give more insight to stakeholders.  I worked with stakeholders in developing processes to manage new feature requests, ensuring each had user requirements and technical requirements well documented.  I provided the architecture for a new website remake and oversaw the development through completion of milestones.  I managed and mentored both software engineers and quality assurance staff.",
       startDate: "02/2018",
       endDate: "Current"
     },
